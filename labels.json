@@ -1,0 +1,75 @@
+{
+    "header": {
+        "title": "Polisense.AI",
+        "subtitle": "AI Co-Pilot for Energy Access"
+    },
+    "problem": {
+        "crisis": {
+            "title": "The Global Energy Access Crisis",
+            "text": "<strong>760 million people</strong> lack reliable electricity, while <strong>49% of energy projects</strong> fail due to poor planning."
+        },
+        "local_gov": {
+            "title": "The Problem for Local Governments",
+            "text": "Local governments are facing planning gridlock due to fragmented data, which causes high project risk and failure to reach those in need.",
+            "pain_points": [
+                {
+                    "icon": "fas fa-sitemap",
+                    "text": "<strong>Data Fragmentation:</strong> Information is siloed and scattered, blocking a unified view."
+                },
+                {
+                    "icon": "fas fa-balance-scale-left",
+                    "text": "<strong>Subjective Prioritization:</strong> Project selection is biased, lacking objective metrics."
+                },
+                {
+                    "icon": "fas fa-exclamation-triangle",
+                    "text": "<strong>High Risk (49% Failure):</strong> Inefficiency drives major project delays and risk."
+                },
+                {
+                    "icon": "fas fa-bullseye",
+                    "text": "<strong>Inadequate Targeting:</strong> Inability to precisely locate the vulnerable, wasting resources."
+                }
+            ]
+        }
+    },
+    "main_content": {
+        "opportunity": {
+            "title": "Polisense AI: A Global Impact Opportunity & Solution Pillars",
+            "text": "By targeting high-density communities with low energy access, Polisense.AI helps bridge the energy gap for millions, ensuring investments are directed where they are most needed.",
+            "pillars": [
+                {
+                    "icon": "fas fa-database",
+                    "title": "1. Integrated Data",
+                    "description": "Unifies geospatial, government, and web data into a single source of truth."
+                },
+                {
+                    "icon": "fas fa-lightbulb",
+                    "title": "2. AI Prioritization",
+                    "description": "Ranks projects on Need, Feasibility, and Impact for objective decisions."
+                },
+                {
+                    "icon": "fas fa-tasks",
+                    "title": "3. Decision Support",
+                    "description": "Interactive dashboards and collaboration tools to accelerate deployment."
+                }
+            ]
+        },
+        "features": {
+            "title": "Platform & Features",
+            "list": [
+                { "icon": "fas fa-map-marked-alt", "text": "Geospatial Intelligence & Analysis" },
+                { "icon": "fas fa-brain", "text": "AI-Powered Scoring & Analytics" },
+                { "icon": "fas fa-chart-line", "text": "Interactive Dashboard & Reporting" },
+                { "icon": "fas fa-users", "text": "Stakeholder Collaboration Tools" }
+            ]
+        }
+    },
+    "footer": {
+        "results": "Proven Results: Up to 80% reduction in project delays and 2.8x better budget targeting accuracy.",
+        "supported_by": "Supported by:",
+        "contact": [
+            { "icon": "fas fa-envelope", "text": "contact@polisense.ai" },
+            { "icon": "fas fa-globe", "text": "www.polisense.ai" },
+            { "icon": "fab fa-linkedin", "text": "/company/polisense" }
+        ]
+    }
+}

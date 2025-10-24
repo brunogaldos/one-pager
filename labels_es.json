@@ -1,0 +1,75 @@
+{
+    "header": {
+        "title": "Polisense.AI",
+        "subtitle": "Copiloto de IA para el acceso a la energía"
+    },
+    "problem": {
+        "crisis": {
+            "title": "La crisis mundial del acceso a la energía",
+            "text": "<strong>760 millones de personas</strong> carecen de electricidad fiable, mientras que el <strong>49% de los proyectos energéticos</strong> fracasan por una mala planificación."
+        },
+        "local_gov": {
+            "title": "El problema para los gobiernos locales",
+            "text": "Los gobiernos locales se enfrentan a un bloqueo de la planificación debido a la fragmentación de los datos, lo que provoca un alto riesgo en los proyectos y la imposibilidad de llegar a los necesitados.",
+            "pain_points": [
+                {
+                    "icon": "fas fa-sitemap",
+                    "text": "<strong>Fragmentación de datos:</strong> La información está aislada y dispersa, lo que impide una visión unificada."
+                },
+                {
+                    "icon": "fas fa-balance-scale-left",
+                    "text": "<strong>Priorización subjetiva:</strong> La selección de proyectos es sesgada y carece de métricas objetivas."
+                },
+                {
+                    "icon": "fas fa-exclamation-triangle",
+                    "text": "<strong>Alto riesgo (49% de fracaso):</strong> La ineficiencia provoca grandes retrasos y riesgos en los proyectos."
+                },
+                {
+                    "icon": "fas fa-bullseye",
+                    "text": "<strong>Focalización inadecuada:</strong> Incapacidad para localizar con precisión a los vulnerables, malgastando recursos."
+                }
+            ]
+        }
+    },
+    "main_content": {
+        "opportunity": {
+            "title": "Oportunidad de impacto global y pilares de la solución",
+            "text": "Al dirigirse a comunidades de alta densidad con bajo acceso a la energía, Polisense.AI ayuda a cerrar la brecha energética para millones de personas, garantizando que las inversiones se dirijan a donde más se necesitan.",
+            "pillars": [
+                {
+                    "icon": "fas fa-database",
+                    "title": "1. Datos Integrados",
+                    "description": "Unifica datos geoespaciales, gubernamentales y web en una única fuente de verdad."
+                },
+                {
+                    "icon": "fas fa-lightbulb",
+                    "title": "2. Priorización con IA",
+                    "description": "Clasifica proyectos por Necesidad, Viabilidad e Impacto para decisiones objetivas."
+                },
+                {
+                    "icon": "fas fa-tasks",
+                    "title": "3. Soporte a Decisiones",
+                    "description": "Paneles interactivos y herramientas de colaboración para acelerar la implementación."
+                }
+            ]
+        },
+        "features": {
+            "title": "Plataforma y Características",
+            "list": [
+                { "icon": "fas fa-map-marked-alt", "text": "Inteligencia y Análisis Geoespacial" },
+                { "icon": "fas fa-brain", "text": "Puntuación y Análisis Impulsados por IA" },
+                { "icon": "fas fa-chart-line", "text": "Panel Interactivo y Reportes" },
+                { "icon": "fas fa-users", "text": "Herramientas de Colaboración para Interesados" }
+            ]
+        }
+    },
+    "footer": {
+        "results": "Resultados Comprobados: Hasta un 80% de reducción en retrasos de proyectos y 2.8x mejor precisión en la asignación de presupuestos.",
+        "supported_by": "Con el apoyo de:",
+        "contact": [
+            { "icon": "fas fa-envelope", "text": "contact@polisense.ai" },
+            { "icon": "fas fa-globe", "text": "www.polisense.ai" },
+            { "icon": "fab fa-linkedin", "text": "/company/polisense" }
+        ]
+    }
+}

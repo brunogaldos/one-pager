@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polisense.AI - A4 One Pager</title>
+    <style>
+        :root {
+            --bg-primary: #293a4f;
+            --color-primary: #50e7ff;
+            --color-accent: #02ffb9;
+            --color-text: #ffffff;
+            --color-text-secondary: rgba(255, 255, 255, 0.8);
+            --color-text-muted: rgba(255, 255, 255, 0.6);
+            --gradient-primary: linear-gradient(135deg, #50e7ff 0%, #02ffb9 100%);
+            --gradient-card: linear-gradient(145deg, rgba(80, 231, 255, 0.1) 0%, rgba(2, 255, 185, 0.05) 100%);
+        }
+
+        /* These styles are ONLY for printing */
+        * {
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            border: none !important; /* Globally remove all borders */
+            box-shadow: none !important; /* Globally remove all shadows */
+        }
+
+        html, body {
+            background: var(--bg-primary) !important;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            line-height: 1.2;
+            color: var(--color-text) !important;
+        }
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        .page-wrapper {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100vh;
+            padding: 10mm;
+            gap: 10px;
+            border-top: 1px solid transparent !important; /* Fix for potential rendering artifact line */
+        }
+
+        .header, .problem {
+            flex-shrink: 0;
+        }
+        
+        .card {
+            background: var(--gradient-card) !important;
+            border-radius: 8px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h2, h3 {
+            border-bottom: none !important; /* Force remove bottom border */
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding-bottom: 8px !important;
+            border-bottom: none !important; /* Force remove bottom border */
+        }
+        .header .logo { width: 100px; height: auto; }
+        .header .header-text {
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .header h1 { font-size: 3rem; font-weight: 800; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .header p { font-size: 1.5rem; color: var(--color-text-secondary) !important; }
+
+        /* Problem */
+        .problem-container {
+            display: flex;
+            gap: 20px;
+            align-items: stretch;
+        }
+        .crisis-summary {
+            flex: 1; /* 25% */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .crisis-summary-content {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .problem-details {
+            flex: 3; /* 75% */
+            margin-top: 0;
+        }
+        .problem h2 { font-size: 1.05rem; text-align: center; color: var(--color-primary) !important; margin-bottom: 11px; }
+        .problem .crisis-summary p { text-align: center; color: var(--color-text-secondary) !important; font-size: 0.9rem; margin-bottom: 11px !important; }
+
+        .problem-details h3 {
+            font-size: 1.05rem;
+            color: var(--color-accent) !important;
+            text-align: center;
+            margin-bottom: 6px !important;
+        }
+        .problem-details p {
+            font-size: 0.9rem;
+            margin-bottom: 6px !important;
+        }
+        .pain-points-container {
+            display: flex;
+            justify-content: space-around;
+            gap: 7px;
+            margin-top: 7px;
+        }
+        .pain-point-card {
+            flex: 1;
+            text-align: center;
+        }
+        .pain-point-card {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .pain-point-card p {
+             font-size: 0.75rem;
+        }
+        .pain-point-card i {
+            font-size: 1.5rem;
+            color: var(--color-accent);
+            margin-bottom: 6px;
+        }
+        .problem-details ul {
+            list-style-position: inside;
+            padding-left: 0;
+        }
+        .problem-details li {
+            font-size: 0.95rem;
+            margin-bottom: 4px !important;
+        }
+        .problem p { text-align: center; color: var(--color-text-secondary) !important; font-size: 0.9rem; margin-bottom: 15px !important; }
+
+        /* Main Content Area */
+        .main-content {
+            flex-grow: 1;
+            min-height: 0;
+            display: flex;
+            flex-direction: column; /* Stack sections vertically */
+            gap: 10px;
+        }
+
+        .opportunity-pillars, .dashboard-features {
+            flex: 1;
+        }
+        
+        /* Opportunity & Pillars */
+        .opportunity-pillars h3 { font-size: 1.05rem; color: var(--color-accent) !important; text-align: center; margin-bottom: 8px !important; border-bottom: none; }
+        .opportunity-pillars > p { font-size: 0.9rem; margin-bottom: 10px !important; }
+        .pillars-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            flex-grow: 1;
+            align-items: center;
+        }
+        .pillar-card {
+            justify-content: center;
+            text-align: center;
+            padding-top: 5px;
+        }
+        .pillar-card i {
+            font-size: 1.7rem;
+            color: var(--color-primary);
+            margin-bottom: 8px;
+        }
+        .pillar-card .pillar-title { font-size: 0.9rem; color: var(--color-primary) !important; font-weight: 600; margin-bottom: 4px; }
+        .pillar-card .pillar-description { font-size: 0.75rem; color: var(--color-text-muted) !important; }
+
+        /* Dashboard & Features */
+        .dashboard-features {
+            height: 100%;
+        }
+        .dashboard-features h3 {
+            font-size: 1.05rem;
+            color: var(--color-accent) !important;
+            margin-bottom: 8px !important;
+            border-bottom: none;
+            text-align: center;
+        }
+        .dashboard-content {
+            display: grid;
+            grid-template-columns: 2.25fr 1fr;
+            gap: 10px;
+            align-items: center;
+            flex-grow: 1;
+        }
+        .dashboard-image {
+            width: 80%;
+            border-radius: 6px;
+            display: block;
+            margin: 0 auto;
+        }
+        .features-list ul { list-style: none; padding: 0; }
+        .features-list li { background: var(--gradient-card) !important; border-radius: 4px; padding: 6px; margin-bottom: 5px !important; font-weight: 500; font-size: 0.77rem; }
+        .features-list i { color: var(--color-primary) !important; margin-right: 6px; }
+
+        /* Footer */
+        .footer {
+            margin-top: auto;
+            flex-shrink: 0;
+            text-align: center;
+        }
+        .results-summary p { font-size: 1.5rem; font-weight: 600; color: var(--color-accent) !important; margin-bottom: 8px !important; }
+        
+        .supported-by {
+            margin: 10px 0;
+        }
+        .supported-by h4 {
+            font-size: 1rem;
+            color: var(--color-text-secondary) !important;
+            margin-bottom: 8px !important;
+        }
+        .supporter-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+        }
+        .supporter-logos img {
+            height: 40px;
+            width: auto;
+            filter: grayscale(100%) brightness(3);
+        }
+
+        .contact-info { display: flex; justify-content: center; gap: 25px; margin-top: 10px; }
+        .contact-info span { font-size: 1rem; }
+        .contact-info i { color: var(--color-primary) !important; margin-right: 5px; }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        
+        <!-- Header -->
+        <header class="header">
+            <img src="assets/logo_new.png" alt="Polisense.AI Logo" class="logo">
+            <div class="header-text">
+                <h1 id="header-title"></h1>
+                <p id="header-subtitle"></p>
+            </div>
+        </header>
+
+        <!-- Problem -->
+        <section class="problem">
+            <div class="problem-container">
+                <div class="crisis-summary card">
+                    <h2 id="problem-crisis-title"></h2>
+                    <div class="crisis-summary-content">
+                        <p id="problem-crisis-text"></p>
+                    </div>
+                </div>
+                <div class="problem-details card">
+                    <h3 id="problem-local_gov-title"></h3>
+                    <p id="problem-local_gov-text"></p>
+                    <div id="problem-local_gov-pain_points" class="pain-points-container">
+                        <!-- Pain points will be inserted here by JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <div class="opportunity-pillars card">
+                <h3 id="main_content-opportunity-title"></h3>
+                <p id="main_content-opportunity-text"></p>
+                <div id="main_content-opportunity-pillars" class="pillars-container">
+                    <!-- Pillars will be inserted here by JS -->
+                </div>
+            </div>
+            <div class="dashboard-features card">
+                <h3 id="main_content-features-title"></h3>
+                <div class="dashboard-content">
+                    <img src="assets/demo.jpg" alt="Polisense.AI Dashboard" class="dashboard-image">
+                    <div class="features-list">
+                        <ul id="main_content-features-list">
+                            <!-- Features will be inserted here by JS -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="results-summary">
+                <p id="footer-results"></p>
+            </div>
+            <div class="supported-by">
+                <h4 id="footer-supported_by"></h4>
+                <div class="supporter-logos">
+                    <img src="assets/supported-by/a-logo.jpg" alt="Supporter A Logo">
+                    <img src="assets/supported-by/b-logo.png" alt="Supporter B Logo">
+                    <img src="assets/supported-by/c-logo.png" alt="Supporter C Logo">
+                </div>
+            </div>
+            <div id="footer-contact" class="contact-info">
+                <!-- Contact info will be inserted here by JS -->
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Function to get query parameters
+            const getQueryParam = (param) => {
+                const urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get(param);
+            };
+
+            // Determine which labels file to load
+            const lang = getQueryParam('lang') || 'en';
+            const labelsFile = lang === 'en' ? 'labels.json' : `labels_${lang}.json`;
+            console.log(`Loading labels from: ${labelsFile}`);
+
+            fetch(labelsFile)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`Network response was not ok: ${response.statusText} for file ${labelsFile}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    // Header
+                    document.getElementById('header-title').innerHTML = data.header.title;
+                    document.getElementById('header-subtitle').innerHTML = data.header.subtitle;
+
+                    // Problem Section
+                    document.getElementById('problem-crisis-title').innerHTML = data.problem.crisis.title;
+                    document.getElementById('problem-crisis-text').innerHTML = data.problem.crisis.text;
+                    document.getElementById('problem-local_gov-title').innerHTML = data.problem.local_gov.title;
+                    document.getElementById('problem-local_gov-text').innerHTML = data.problem.local_gov.text;
+                    
+                    const painPointsContainer = document.getElementById('problem-local_gov-pain_points');
+                    painPointsContainer.innerHTML = ''; // Clear existing
+                    data.problem.local_gov.pain_points.forEach(point => {
+                        const pointDiv = document.createElement('div');
+                        pointDiv.className = 'pain-point-card';
+                        pointDiv.innerHTML = `<i class="${point.icon}"></i><p>${point.text}</p>`;
+                        painPointsContainer.appendChild(pointDiv);
+                    });
+
+                    // Main Content
+                    document.getElementById('main_content-opportunity-title').innerHTML = data.main_content.opportunity.title;
+                    document.getElementById('main_content-opportunity-text').innerHTML = data.main_content.opportunity.text;
+
+                    const pillarsContainer = document.getElementById('main_content-opportunity-pillars');
+                    pillarsContainer.innerHTML = ''; // Clear existing
+                    data.main_content.opportunity.pillars.forEach(pillar => {
+                        const pillarDiv = document.createElement('div');
+                        pillarDiv.className = 'pillar-card';
+                        pillarDiv.innerHTML = `<i class="${pillar.icon}"></i><h4 class="pillar-title">${pillar.title}</h4><p class="pillar-description">${pillar.description}</p>`;
+                        pillarsContainer.appendChild(pillarDiv);
+                    });
+
+                    document.getElementById('main_content-features-title').innerHTML = data.main_content.features.title;
+                    const featuresList = document.getElementById('main_content-features-list');
+                    featuresList.innerHTML = ''; // Clear existing
+                    data.main_content.features.list.forEach(feature => {
+                        const featureLi = document.createElement('li');
+                        featureLi.innerHTML = `<i class="${feature.icon}"></i> ${feature.text}`;
+                        featuresList.appendChild(featureLi);
+                    });
+
+                    // Footer
+                    document.getElementById('footer-results').innerHTML = data.footer.results;
+                    document.getElementById('footer-supported_by').innerHTML = data.footer.supported_by;
+
+                    const contactContainer = document.getElementById('footer-contact');
+                    contactContainer.innerHTML = ''; // Clear existing
+                    data.footer.contact.forEach(item => {
+                        const contactSpan = document.createElement('span');
+                        contactSpan.innerHTML = `<i class="${item.icon}"></i> ${item.text}`;
+                        contactContainer.appendChild(contactSpan);
+                    });
+
+                    // Signal that content is loaded
+                    document.body.classList.add('content-loaded');
+                    console.log('Content loaded successfully.');
+                })
+                .catch(error => {
+                    console.error('Error loading or parsing labels:', error);
+                    const errorDiv = document.createElement('div');
+                    errorDiv.textContent = `Failed to load content: ${error.message}. Please check the console.`;
+                    errorDiv.style.color = 'red';
+                    errorDiv.style.padding = '20px';
+                    errorDiv.style.fontFamily = 'sans-serif';
+                    document.body.prepend(errorDiv);
+                });
+        });
+    </script>
+</body>
+</html>
