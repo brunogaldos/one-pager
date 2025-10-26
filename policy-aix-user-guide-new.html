@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Polisense.AI User Guide</title>
+  <style>
+    :root {
+      --bg-primary: #293a4f;
+      --color-primary: #50e7ff;
+      --color-accent: #02ffb9;
+      --color-text: #ffffff;
+      --color-text-secondary: rgba(255, 255, 255, 0.85);
+      --color-text-muted: rgba(255, 255, 255, 0.6);
+      --gradient-primary: linear-gradient(135deg, #50e7ff 0%, #02ffb9 100%);
+      --gradient-card: linear-gradient(145deg, rgba(80, 231, 255, 0.1) 0%, rgba(2, 255, 185, 0.05) 100%);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--bg-primary);
+      color: var(--color-text);
+      font-family: "Inter", sans-serif;
+      font-size: 13px;
+      line-height: 1.5;
+      padding: 20px;
+    }
+
+    .page-wrapper {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 8px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 8px;
+    }
+
+    header img {
+      width: 80px;
+      height: auto;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    header p {
+      color: var(--color-text-secondary);
+      font-size: 1rem;
+    }
+
+    .card {
+      background: var(--gradient-card);
+      border-radius: 10px;
+      padding: 16px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      color: var(--color-primary);
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      color: var(--color-accent);
+      margin-bottom: 6px;
+      text-align: center;
+    }
+
+    p, li {
+      color: var(--color-text-secondary);
+      margin-bottom: 6px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    /* Steps */
+    .steps-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .step-card {
+      background: var(--gradient-card);
+      padding: 10px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .step-card i {
+      font-size: 1.4rem;
+      color: var(--color-accent);
+      margin-bottom: 4px;
+    }
+
+    /* Interface grid */
+    .interface-steps-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+    }
+
+    .interface-step-card {
+      text-align: center;
+      background: var(--gradient-card);
+      border-radius: 8px;
+      padding: 10px;
+    }
+
+    .interface-step-card i {
+      font-size: 1.4rem;
+      color: var(--color-primary);
+      margin-bottom: 4px;
+    }
+
+    .interface-step-card h4 {
+      color: var(--color-primary);
+      font-size: 0.9rem;
+      margin-bottom: 4px;
+    }
+
+    .interface-step-card p {
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+    }
+
+    /* Chatbot Section */
+    .chatbot-section ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .chatbot-section li {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 6px;
+      margin-bottom: 6px;
+      padding: 6px;
+      font-size: 0.85rem;
+    }
+
+    .chatbot-section i {
+      color: var(--color-primary);
+      margin-right: 6px;
+    }
+
+    /* Report Section */
+    .report-specs p {
+      font-size: 0.85rem;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 20px;
+      padding-top: 8px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    footer .tips {
+      margin-top: 8px;
+      font-size: 0.85rem;
+      color: var(--color-text-muted);
+    }
+
+    footer i {
+      color: var(--color-accent);
+      margin-right: 4px;
+    }
+  </style>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <div class="page-wrapper">
+
+    <!-- Header -->
+    <header>
+      <img src="assets/logo_new.png" alt="Polisense.AI Logo">
+      <div>
+        <h1>Polisense.AI</h1>
+        <p>User Guide – Getting Started</p>
+      </div>
+    </header>
+
+    <!-- Section 1: Registration -->
+    <section class="card">
+      <h2>1. Registration & Sign-In</h2>
+      <p>Begin using Polisense.AI in just a few simple steps:</p>
+      <div class="steps-container">
+        <div class="step-card">
+          <i class="fas fa-user-plus"></i>
+          <p><strong>1. Register:</strong> Click the person icon (👤) → Create your account with an email.</p>
+        </div>
+        <div class="step-card">
+          <i class="fas fa-envelope"></i>
+          <p><strong>2. Verify:</strong> Check your inbox → Click the verification link.</p>
+        </div>
+        <div class="step-card">
+          <i class="fas fa-sign-in-alt"></i>
+          <p><strong>3. Sign In:</strong> Visit <code>localhost:3000/sign-in</code> → Automatic redirect to Explore.</p>
+        </div>
+        <div class="step-card">
+          <i class="fas fa-star"></i>
+          <p><strong>4. Benefits:</strong> Save datasets, access AI tools, and generate reports.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Explore Page -->
+    <section class="card">
+      <h2>2. Explore Page Overview</h2>
+      <p>The Explore Page (<code>localhost:3000/data/explore</code>) is your research command center.</p>
+      <div class="interface-steps-container">
+        <div class="interface-step-card">
+          <i class="fas fa-map"></i>
+          <h4>Interactive Map</h4>
+          <p>Visualize real-time datasets, click for info, zoom, and analyze regions.</p>
+        </div>
+        <div class="interface-step-card">
+          <i class="fas fa-layer-group"></i>
+          <h4>Dataset Sidebar</h4>
+          <p>Browse and add datasets to your map view or remove layers as needed.</p>
+        </div>
+        <div class="interface-step-card">
+          <i class="fas fa-comments"></i>
+          <h4>AI Chatbot Panel</h4>
+          <p>Access your AI assistant on the right to analyze and interpret data.</p>
+        </div>
+        <div class="interface-step-card">
+          <i class="fas fa-chart-bar"></i>
+          <h4>Report Tools</h4>
+          <p>Generate and download professional research reports with one click.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: AI Chatbot -->
+    <section class="card chatbot-section">
+      <h2>3. AI Research Chatbot</h2>
+      <p>Your intelligent assistant for data-driven policy analysis.</p>
+      <ul>
+        <li><i class="fas fa-robot"></i> Click the floating <strong>"AI"</strong> button (bottom-right) to open chatbot.</li>
+        <li><i class="fas fa-at"></i> Type <strong>@</strong> + dataset name to attach datasets as research context.</li>
+        <li><i class="fas fa-file-upload"></i> Upload files (PDF, Word, Excel, CSV) for deeper analysis.</li>
+        <li><i class="fas fa-lightbulb"></i> Ask policy questions like: “Compare renewable energy policies in Peru.”</li>
+        <li><i class="fas fa-map-marked-alt"></i> Focus analyses on regions, e.g., “Analyze electrification in Arequipa.”</li>
+      </ul>
+      <p><strong>Capabilities:</strong> Policy analysis, stakeholder mapping, cost-benefit evaluation, data interpretation, and geographic insights.</p>
+    </section>
+
+    <!-- Section 4: Report Generation -->
+    <section class="card">
+      <h2>4. Report Generation</h2>
+      <h3>How to Create Reports</h3>
+      <div class="report-specs">
+        <p><strong>Step 1:</strong> Conduct research with the chatbot.</p>
+        <p><strong>Step 2:</strong> Click the <strong>REPORT</strong> menu on the header.</p>
+        <p><strong>Step 3:</strong> Select <em>"Create New Report"</em>.</p>
+        <p><strong>Step 4:</strong> The AI generates a professional, 8-section report.</p>
+        <p><strong>Step 5:</strong> Review and download it in PDF or Word format.</p>
+      </div>
+      <p><strong>Report Includes:</strong> Executive summary, coverage analysis, social impact, policy barriers, stakeholder mapping, prioritization table, and references.</p>
+      <p>Reports are optimized for professional presentation and policy documentation.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p><strong>Start exploring at:</strong> <code>localhost:3000/data/explore</code></p>
+      <div class="tips">
+        <p><i class="fas fa-lightbulb"></i> Tip: Use @datasets and upload documents for more accurate AI insights.</p>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
