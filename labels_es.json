@@ -67,9 +67,9 @@
         "results": "Resultados Comprobados: Hasta un 80% de reducción en retrasos de proyectos y 2.8x mejor precisión en la asignación de presupuestos.",
         "supported_by": "Con el apoyo de:",
         "contact": [
-            { "icon": "fas fa-envelope", "text": "contact@polisense.ai" },
-            { "icon": "fas fa-globe", "text": "www.polisense.ai" },
-            { "icon": "fab fa-linkedin", "text": "/company/polisense" }
+            { "icon": "fas fa-envelope", "text": "contact@polisenseai.com" },
+            { "icon": "fas fa-globe", "text": "www.polisenseai.com" },
+            { "icon": "fab fa-linkedin", "text": "/company/polisense-ai" }
         ]
     }
 }

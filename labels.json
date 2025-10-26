@@ -67,9 +67,9 @@
         "results": "Proven Results: Up to 80% reduction in project delays and 2.8x better budget targeting accuracy.",
         "supported_by": "Supported by:",
         "contact": [
-            { "icon": "fas fa-envelope", "text": "contact@polisense.ai" },
-            { "icon": "fas fa-globe", "text": "www.polisense.ai" },
-            { "icon": "fab fa-linkedin", "text": "/company/polisense" }
+            { "icon": "fas fa-envelope", "text": "contact@polisenseai.com" },
+            { "icon": "fas fa-globe", "text": "www.polisenseai.com" },
+            { "icon": "fab fa-linkedin", "text": "/company/polisense-ai" }
         ]
     }
 }
