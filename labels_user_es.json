@@ -1,0 +1,103 @@
+{
+  "header": {
+    "title": "Polisense.AI",
+    "subtitle": "Guía de Usuario – Primeros Pasos"
+  },
+  "sections": {
+    "registration": {
+      "title": "1. Registro e Inicio de Sesión",
+      "description": "Comienza a usar Polisense.AI en solo unos pasos simples:",
+      "steps": [
+        {
+          "number": "1. Registrarse:",
+          "description": "Haz clic en el ícono de persona (👤) → Crea tu cuenta con un correo electrónico."
+        },
+        {
+          "number": "2. Verificar:",
+          "description": "Revisa tu bandeja de entrada → Haz clic en el enlace de verificación."
+        },
+        {
+          "number": "3. Iniciar Sesión:",
+          "description": "Visita https://polisenseai.com/demo → Redirección automática a Explorar."
+        },
+        {
+          "number": "4. Beneficios:",
+          "description": "Guardar conjuntos de datos, acceder a herramientas de IA y generar reportes."
+        }
+      ]
+    },
+    "explore": {
+      "title": "2. Resumen de la Página Explorar",
+      "description": "La Página Explorar (https://polisenseai.com/demo) es tu centro de comando de investigación.",
+      "features": [
+        {
+          "title": "Mapa Interactivo",
+          "description": "Visualiza conjuntos de datos en tiempo real, haz clic para obtener información, haz zoom y analiza regiones."
+        },
+        {
+          "title": "Barra Lateral de Datos",
+          "description": "Explora y agrega conjuntos de datos a tu vista de mapa o elimina capas según sea necesario."
+        },
+        {
+          "title": "Panel de Chatbot IA",
+          "description": "Accede a tu asistente de IA a la derecha para analizar e interpretar datos."
+        },
+        {
+          "title": "Herramientas de reportes",
+          "description": "Genera y descarga reportes de investigación profesionales con un clic."
+        }
+      ]
+    },
+    "chatbot": {
+      "title": "3. Chatbot de Investigación IA",
+      "description": "Tu asistente inteligente para análisis de políticas basado en datos.",
+      "instructions": [
+        "Haz clic en el botón flotante \"IA\" (abajo a la derecha) para abrir el chatbot.",
+        "Escribe @ + nombre del conjunto de datos para adjuntar conjuntos de datos como contexto de investigación.",
+        "Sube archivos (PDF, Word, Excel, CSV) para análisis más profundo.",
+        "Haz preguntas de políticas como: \"Compara las políticas de energía renovable en Perú.\"",
+        "Enfoca análisis en regiones, ej., \"Analiza la electrificación en Arequipa.\""
+      ],
+      "capacidades": "Análisis de políticas, mapeo de partes interesadas, evaluación costo-beneficio, interpretación de datos e información geográfica."
+    },
+    "reports": {
+      "title": "4. Generación de Reporte",
+      "subtitle": "Cómo Crear Reportes",
+      "steps": [
+        "Realiza investigación con el chatbot.",
+        "Haz clic en el menú REPORTE en el encabezado.",
+        "Selecciona \"Crear Nuevo Reporte\".",
+        "La IA genera un Reporte profesional de 8 secciones.",
+        "Revisa y descárgalo en formato PDF o Word."
+      ],
+      "includes_label": "El Reporte Incluye:",
+      "includes": "Resumen ejecutivo, análisis de cobertura, impacto social, barreras de políticas, mapeo de partes interesadas, tabla de priorización y referencias.",
+      "note": "Los reportes están optimizados para presentación profesional y documentación de políticas."
+    }
+  },
+  "footer": {
+    "start_exploring": "Comienza a explorar en:",
+    "demo_url": "https://polisenseai.com/demo",
+    "tip": "Consejo: Usa @conjuntosdedatos y sube documentos para obtener información de IA más precisa.",
+    "results": "Resultados Comprobados: Hasta 80% de reducción en retrasos de proyectos y 2.8x mejor precisión en el objetivo del presupuesto.",
+    "contact": [
+      {
+        "type": "email",
+        "text": "contact@polisenseai.com",
+        "url": "mailto:contact@polisenseai.com"
+      },
+      {
+        "type": "website",
+        "text": "www.polisenseai.com",
+        "url": "https://www.polisenseai.com"
+      },
+      {
+        "type": "linkedin",
+        "text": "/company/polisense-ai",
+        "url": "https://linkedin.com/company/polisense-ai"
+      }
+    ]
+  }
+}
+
+

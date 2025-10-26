@@ -10,7 +10,7 @@
       --color-primary: #50e7ff;
       --color-accent: #02ffb9;
       --color-text: #ffffff;
-      --color-text-secondary: rgba(255, 255, 255, 0.85);
+      --color-text-secondary: rgba(255, 255, 255, 0.8);
       --color-text-muted: rgba(255, 255, 255, 0.6);
       --gradient-primary: linear-gradient(135deg, #50e7ff 0%, #02ffb9 100%);
       --gradient-card: linear-gradient(145deg, rgba(80, 231, 255, 0.1) 0%, rgba(2, 255, 185, 0.05) 100%);
@@ -290,6 +290,124 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <script>
+    // Load labels dynamically based on language parameter
+    async function loadLabels() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const lang = urlParams.get('lang') || 'en';
+      const labelsFile = lang === 'en' ? 'labels_user.json' : `labels_user_${lang}.json`;
+      
+      try {
+        const response = await fetch(labelsFile);
+        const labels = await response.json();
+        populateContent(labels);
+      } catch (error) {
+        console.error('Error loading labels:', error);
+        // Fallback to English if labels file not found
+        if (lang !== 'en') {
+          try {
+            const response = await fetch('labels_user.json');
+            const labels = await response.json();
+            populateContent(labels);
+          } catch (fallbackError) {
+            console.error('Error loading fallback labels:', fallbackError);
+          }
+        }
+      }
+    }
+
+    function populateContent(labels) {
+      // Update header
+      document.querySelector('header h1').textContent = labels.header.title;
+      document.querySelector('header p').textContent = labels.header.subtitle;
+
+      // Update registration section
+      document.querySelector('.card h2').textContent = labels.sections.registration.title;
+      document.querySelector('.card p').textContent = labels.sections.registration.description;
+      
+      const stepCards = document.querySelectorAll('.step-card');
+      labels.sections.registration.steps.forEach((step, index) => {
+        if (stepCards[index]) {
+          const p = stepCards[index].querySelector('p');
+          p.innerHTML = `<strong>${step.number}</strong> ${step.description}`;
+        }
+      });
+
+      // Update explore section
+      const exploreCard = document.querySelectorAll('.card')[1];
+      exploreCard.querySelector('h2').textContent = labels.sections.explore.title;
+      exploreCard.querySelector('p').textContent = labels.sections.explore.description;
+      
+      const interfaceCards = document.querySelectorAll('.interface-step-card');
+      labels.sections.explore.features.forEach((feature, index) => {
+        if (interfaceCards[index]) {
+          interfaceCards[index].querySelector('h4').textContent = feature.title;
+          interfaceCards[index].querySelector('p').textContent = feature.description;
+        }
+      });
+
+      // Update chatbot section
+      const chatbotCard = document.querySelector('.chatbot-section');
+      chatbotCard.querySelector('h2').textContent = labels.sections.chatbot.title;
+      chatbotCard.querySelector('p').textContent = labels.sections.chatbot.description;
+      
+      const chatbotItems = chatbotCard.querySelectorAll('li');
+      labels.sections.chatbot.instructions.forEach((instruction, index) => {
+        if (chatbotItems[index]) {
+          const icon = chatbotItems[index].querySelector('i');
+          chatbotItems[index].innerHTML = `${icon.outerHTML} ${instruction}`;
+        }
+      });
+      
+      const capabilitiesP = chatbotCard.querySelector('p:last-child');
+      capabilitiesP.innerHTML = `<strong>Capabilities:</strong> ${labels.sections.chatbot.capabilities}`;
+
+      // Update reports section
+      const reportsCard = document.querySelectorAll('.card')[3];
+      reportsCard.querySelector('h2').textContent = labels.sections.reports.title;
+      reportsCard.querySelector('h3').textContent = labels.sections.reports.subtitle;
+      
+      const reportSteps = reportsCard.querySelectorAll('.report-specs p');
+      labels.sections.reports.steps.forEach((step, index) => {
+        if (reportSteps[index]) {
+          reportSteps[index].innerHTML = `<strong>Step ${index + 1}:</strong> ${step}`;
+        }
+      });
+      
+      // Update the "Report Includes" paragraph (the one after .report-specs)
+      const reportSpecs = reportsCard.querySelector('.report-specs');
+      const includesP = reportSpecs.nextElementSibling;
+      includesP.innerHTML = `<strong>${labels.sections.reports.includes_label}</strong> ${labels.sections.reports.includes}`;
+      
+      // Update the note paragraph (the last paragraph in the section)
+      const noteP = includesP.nextElementSibling;
+      noteP.innerHTML = labels.sections.reports.note;
+
+      // Update footer
+      const footer = document.querySelector('footer');
+      footer.querySelector('p').innerHTML = `<strong>${labels.footer.start_exploring}</strong> <code>${labels.footer.demo_url}</code>`;
+      footer.querySelector('.tips p').innerHTML = `<i class="fas fa-lightbulb"></i> ${labels.footer.tip}`;
+
+      // Update page footer
+      const pageFooter = document.querySelector('.page-footer');
+      const contactInfo = pageFooter.querySelector('.contact-info');
+      contactInfo.innerHTML = '';
+      
+      labels.footer.contact.forEach(contact => {
+        const contactItem = document.createElement('div');
+        contactItem.className = 'contact-item';
+        contactItem.innerHTML = `
+          <i class="${contact.type === 'email' ? 'fas fa-envelope' : contact.type === 'website' ? 'fas fa-globe' : 'fab fa-linkedin'}"></i>
+          <a href="${contact.url}" target="_blank">${contact.text}</a>
+        `;
+        contactInfo.appendChild(contactItem);
+      });
+    }
+
+    // Load content when page loads
+    document.addEventListener('DOMContentLoaded', loadLabels);
+  </script>
 </head>
 
 <body>

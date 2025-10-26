@@ -1,0 +1,103 @@
+{
+  "header": {
+    "title": "Polisense.AI",
+    "subtitle": "User Guide – Getting Started"
+  },
+  "sections": {
+    "registration": {
+      "title": "1. Registration & Sign-In",
+      "description": "Begin using Polisense.AI in just a few simple steps:",
+      "steps": [
+        {
+          "number": "1. Register:",
+          "description": "Click the person icon (👤) → Create your account with an email."
+        },
+        {
+          "number": "2. Verify:",
+          "description": "Check your inbox → Click the verification link."
+        },
+        {
+          "number": "3. Sign In:",
+          "description": "Visit https://polisenseai.com/demo → Automatic redirect to Explore."
+        },
+        {
+          "number": "4. Benefits:",
+          "description": "Save datasets, access AI tools, and generate reports."
+        }
+      ]
+    },
+    "explore": {
+      "title": "2. Explore Page Overview",
+      "description": "The Explore Page (https://polisenseai.com/demo) is your research command center.",
+      "features": [
+        {
+          "title": "Interactive Map",
+          "description": "Visualize real-time datasets, click for info, zoom, and analyze regions."
+        },
+        {
+          "title": "Dataset Sidebar",
+          "description": "Browse and add datasets to your map view or remove layers as needed."
+        },
+        {
+          "title": "AI Chatbot Panel",
+          "description": "Access your AI assistant on the right to analyze and interpret data."
+        },
+        {
+          "title": "Report Tools",
+          "description": "Generate and download professional research reports with one click."
+        }
+      ]
+    },
+    "chatbot": {
+      "title": "3. AI Research Chatbot",
+      "description": "Your intelligent assistant for data-driven policy analysis.",
+      "instructions": [
+        "Click the floating \"AI\" button (bottom-right) to open chatbot.",
+        "Type @ + dataset name to attach datasets as research context.",
+        "Upload files (PDF, Word, Excel, CSV) for deeper analysis.",
+        "Ask policy questions like: \"Compare renewable energy policies in Peru.\"",
+        "Focus analyses on regions, e.g., \"Analyze electrification in Arequipa.\""
+      ],
+      "capabilities": "Policy analysis, stakeholder mapping, cost-benefit evaluation, data interpretation, and geographic insights."
+    },
+    "reports": {
+      "title": "4. Report Generation",
+      "subtitle": "How to Create Reports",
+      "steps": [
+        "Conduct research with the chatbot.",
+        "Click the REPORT menu on the header.",
+        "Select \"Create New Report\".",
+        "The AI generates a professional, 8-section report.",
+        "Review and download it in PDF or Word format."
+      ],
+      "includes_label": "Report Includes:",
+      "includes": "Executive summary, coverage analysis, social impact, policy barriers, stakeholder mapping, prioritization table, and references.",
+      "note": "Reports are optimized for professional presentation and policy documentation."
+    }
+  },
+  "footer": {
+    "start_exploring": "Start exploring at:",
+    "demo_url": "https://polisenseai.com/demo",
+    "tip": "Tip: Use @datasets and upload documents for more accurate AI insights.",
+    "results": "Proven Results: Up to 80% reduction in project delays and 2.8x better budget targeting accuracy.",
+    "contact": [
+      {
+        "type": "email",
+        "text": "contact@polisenseai.com",
+        "url": "mailto:contact@polisenseai.com"
+      },
+      {
+        "type": "website",
+        "text": "www.polisenseai.com",
+        "url": "https://www.polisenseai.com"
+      },
+      {
+        "type": "linkedin",
+        "text": "/company/polisense-ai",
+        "url": "https://linkedin.com/company/polisense-ai"
+      }
+    ]
+  }
+}
+
+
