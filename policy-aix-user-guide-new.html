@@ -192,6 +192,100 @@
       color: var(--color-accent);
       margin-right: 4px;
     }
+
+    /* PDF-specific styles for better page breaks */
+    @media print {
+      .card {
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      
+      .steps-container {
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      
+      .interface-steps-container {
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      
+      .chatbot-section ul {
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      
+      .report-specs {
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      
+      h2, h3 {
+        page-break-after: avoid;
+        break-after: avoid;
+      }
+      
+      /* Ensure sections don't break awkwardly */
+      section {
+        page-break-inside: avoid;
+        break-inside: avoid;
+        margin-bottom: 20px;
+      }
+    }
+
+    /* Page footer styles */
+    .page-footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--bg-primary);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 8px 20px;
+      font-size: 0.75rem;
+      color: var(--color-text-muted);
+      z-index: 1000;
+    }
+
+    .page-footer .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+
+
+    .page-footer .contact-info {
+      display: flex;
+      gap: 16px;
+    }
+
+    .page-footer .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .page-footer .contact-item i {
+      color: var(--color-primary);
+      font-size: 0.7rem;
+    }
+
+    .page-footer .contact-item a {
+      color: var(--color-text-muted);
+      text-decoration: none;
+    }
+
+    .page-footer .contact-item a:hover {
+      color: var(--color-primary);
+    }
+
+    /* Add bottom margin to body to account for fixed footer */
+    body {
+      padding-bottom: 60px;
+    }
   </style>
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -225,7 +319,7 @@
         </div>
         <div class="step-card">
           <i class="fas fa-sign-in-alt"></i>
-          <p><strong>3. Sign In:</strong> Visit <code>localhost:3000/sign-in</code> → Automatic redirect to Explore.</p>
+          <p><strong>3. Sign In:</strong> Visit <code>https://polisenseai.com/demo</code> → Automatic redirect to Explore.</p>
         </div>
         <div class="step-card">
           <i class="fas fa-star"></i>
@@ -237,7 +331,7 @@
     <!-- Section 2: Explore Page -->
     <section class="card">
       <h2>2. Explore Page Overview</h2>
-      <p>The Explore Page (<code>localhost:3000/data/explore</code>) is your research command center.</p>
+      <p>The Explore Page (<code>https://polisenseai.com/demo</code>) is your research command center.</p>
       <div class="interface-steps-container">
         <div class="interface-step-card">
           <i class="fas fa-map"></i>
@@ -293,12 +387,32 @@
 
     <!-- Footer -->
     <footer>
-      <p><strong>Start exploring at:</strong> <code>localhost:3000/data/explore</code></p>
+      <p><strong>Start exploring at:</strong> <code>https://polisenseai.com/demo</code></p>
       <div class="tips">
         <p><i class="fas fa-lightbulb"></i> Tip: Use @datasets and upload documents for more accurate AI insights.</p>
       </div>
     </footer>
 
+  </div>
+
+  <!-- Page Footer -->
+  <div class="page-footer">
+    <div class="footer-content">
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:contact@polisenseai.com">contact@polisenseai.com</a>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-globe"></i>
+          <a href="https://www.polisenseai.com" target="_blank">www.polisenseai.com</a>
+        </div>
+        <div class="contact-item">
+          <i class="fab fa-linkedin"></i>
+          <a href="https://linkedin.com/company/polisense-ai" target="_blank">/company/polisense-ai</a>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 </html>
