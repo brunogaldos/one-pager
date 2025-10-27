@@ -333,7 +333,9 @@
       });
       
       const capabilitiesP = chatbotCard.querySelector('p:last-child');
-      capabilitiesP.innerHTML = `<strong>Capabilities:</strong> ${labels.sections.chatbot.capabilities}`;
+      const capabilitiesText = labels.sections.chatbot.capabilities || labels.sections.chatbot.capacidades;
+      const capabilitiesLabel = labels.sections.chatbot.capabilities ? 'Capabilities:' : 'Capacidades:';
+      capabilitiesP.innerHTML = `<strong>${capabilitiesLabel}</strong> ${capabilitiesText}`;
 
       // Update reports section
       const reportsCard = document.querySelectorAll('.card')[3];
