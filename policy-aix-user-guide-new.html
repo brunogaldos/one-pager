@@ -233,58 +233,30 @@
       }
     }
 
-    /* Page footer styles */
-    .page-footer {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: var(--bg-primary);
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      padding: 8px 20px;
-      font-size: 0.75rem;
-      color: var(--color-text-muted);
-      z-index: 1000;
+    /* Footer styles matching polisense-A4 */
+    .footer {
+      margin-top: auto;
+      flex-shrink: 0;
+      text-align: center;
+      padding: 20px 0;
     }
+    
 
-    .page-footer .footer-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 960px;
-      margin: 0 auto;
+    
+    .contact-info { 
+      display: flex; 
+      justify-content: center; 
+      gap: 25px; 
+      margin-top: 10px; 
     }
-
-
-
-    .page-footer .contact-info {
-      display: flex;
-      gap: 16px;
+    
+    .contact-info span { 
+      font-size: 1rem; 
     }
-
-    .page-footer .contact-item {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-    }
-
-    .page-footer .contact-item i {
-      color: var(--color-primary);
-      font-size: 0.7rem;
-    }
-
-    .page-footer .contact-item a {
-      color: var(--color-text-muted);
-      text-decoration: none;
-    }
-
-    .page-footer .contact-item a:hover {
-      color: var(--color-primary);
-    }
-
-    /* Add bottom margin to body to account for fixed footer */
-    body {
-      padding-bottom: 60px;
+    
+    .contact-info i { 
+      color: var(--color-primary) !important; 
+      margin-right: 5px; 
     }
   </style>
 
@@ -385,23 +357,15 @@
       noteP.innerHTML = labels.sections.reports.note;
 
       // Update footer
-      const footer = document.querySelector('footer');
-      footer.querySelector('p').innerHTML = `<strong>${labels.footer.start_exploring}</strong> <code>${labels.footer.demo_url}</code>`;
-      footer.querySelector('.tips p').innerHTML = `<i class="fas fa-lightbulb"></i> ${labels.footer.tip}`;
 
-      // Update page footer
-      const pageFooter = document.querySelector('.page-footer');
-      const contactInfo = pageFooter.querySelector('.contact-info');
-      contactInfo.innerHTML = '';
+    
       
-      labels.footer.contact.forEach(contact => {
-        const contactItem = document.createElement('div');
-        contactItem.className = 'contact-item';
-        contactItem.innerHTML = `
-          <i class="${contact.type === 'email' ? 'fas fa-envelope' : contact.type === 'website' ? 'fas fa-globe' : 'fab fa-linkedin'}"></i>
-          <a href="${contact.url}" target="_blank">${contact.text}</a>
-        `;
-        contactInfo.appendChild(contactItem);
+      const contactContainer = document.getElementById('footer-contact');
+      contactContainer.innerHTML = ''; // Clear existing
+      labels.footer.contact.forEach(item => {
+        const contactSpan = document.createElement('span');
+        contactSpan.innerHTML = `<i class="${item.type === 'email' ? 'fas fa-envelope' : item.type === 'website' ? 'fas fa-globe' : 'fab fa-linkedin'}"></i> ${item.text}`;
+        contactContainer.appendChild(contactSpan);
       });
     }
 
@@ -504,33 +468,14 @@
     </section>
 
     <!-- Footer -->
-    <footer>
-      <p><strong>Start exploring at:</strong> <code>https://polisenseai.com/demo</code></p>
-      <div class="tips">
-        <p><i class="fas fa-lightbulb"></i> Tip: Use @datasets and upload documents for more accurate AI insights.</p>
+    <footer class="footer">
+
+      </div>
+      <div id="footer-contact" class="contact-info">
+        <!-- Contact info will be inserted here by JS -->
       </div>
     </footer>
 
-  </div>
-
-  <!-- Page Footer -->
-  <div class="page-footer">
-    <div class="footer-content">
-      <div class="contact-info">
-        <div class="contact-item">
-          <i class="fas fa-envelope"></i>
-          <a href="mailto:contact@polisenseai.com">contact@polisenseai.com</a>
-        </div>
-        <div class="contact-item">
-          <i class="fas fa-globe"></i>
-          <a href="https://www.polisenseai.com" target="_blank">www.polisenseai.com</a>
-        </div>
-        <div class="contact-item">
-          <i class="fab fa-linkedin"></i>
-          <a href="https://linkedin.com/company/polisense-ai" target="_blank">/company/polisense-ai</a>
-        </div>
-      </div>
-    </div>
   </div>
 </body>
 </html>
